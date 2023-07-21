@@ -170,6 +170,7 @@
 
 
 
+/* Esercizio 12 e Esercizio 13 */
 
 .ex-12-button, .ex-13-button {
     position: relative;
@@ -184,6 +185,8 @@
     text-align: center;
     text-decoration: none;
 }
+
+
 .ex-12-top-white, .ex-13-top-white {
     position: absolute;
     top: -10px;
@@ -199,4 +202,120 @@
     background: #f5f5f5;
     width: 60px;
     height: 20px;
+}
+
+
+
+/* Esercizio 12 */
+.ex-12-button:hover .ex-12-top-white{
+    animation: dance-right 1s linear;
+    animation-direction: alternate;
+    animation-iteration-count: 2; 
+}
+
+.ex-12-button:hover .ex-12-bottom-white{
+    animation: dance-left 1s linear;
+    animation-direction: alternate;
+    animation-iteration-count: 2; 
+}
+
+@keyframes dance-right {
+    0% {
+
+    }
+    
+    100% {
+    left: 69%;
+    transition: left 1s;
+    }
+}
+
+@keyframes dance-left {
+    0% {
+
+    }
+    
+    100% {
+        right: 69%;
+        transition: left 1s;
+    }
+}
+
+
+/* Esercizio 13 */
+
+/* ROTAZIONE OBJ TOP */
+.ex-13-button:hover .ex-13-top-white{
+    animation: btn-top-rot 2s linear;
+}
+
+@keyframes btn-top-rot {
+    0% {
+        top: -10px;
+        left: 10%;
+    }
+
+    25% {
+        top: -10px;
+        left: calc(100% - 56px);
+    }
+
+    50% {
+        left: calc(100% - 56px);
+        top: 50px;
+    }
+
+    75% {
+        top: 50px;
+        left: -20px;
+    }
+
+    90% {
+        top: -10px;
+        left: -20px;
+    }
+
+    100% {
+        top: -10px;
+        left: 10%;
+    }
+}
+
+
+/* ROTAZIONE OBJ BOTTOM */
+.ex-13-button:hover .ex-13-bottom-white{
+    animation: btn-bottom-rot 2s linear;
+}
+
+@keyframes btn-bottom-rot {
+    0% {
+        bottom: -10px;
+        right: 20%;
+    }
+    
+    25% {
+        bottom: -10px;
+        right: calc(100% - 30px);
+    }
+
+    50% {
+        bottom: 60px;
+        right: calc(100% - 30px);
+    }
+
+    75% {
+        bottom: 60px;
+        right: -20%;
+    }
+
+    90% {
+        bottom: -10px;
+        right: -20%;
+    }
+
+    100% {
+        bottom: -10px;
+        right: 20%;
+    }
+    
 }
